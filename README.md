@@ -1,25 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ERP System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A comprehensive Enterprise Resource Planning (ERP) system built with Laravel framework.
+
+## Features
+
+- **User Management**: Admin, HR Manager, and Employee roles
+- **Employee Management**: Complete employee information and status tracking
+- **Task Management**: Assign and track tasks across the organization
+- **Password Management**: Secure password storage and management
+- **Role-based Access Control**: Different access levels for different user types
+
+## Quick Start
+
+### Prerequisites
+
+- PHP 8.2 or higher
+- MySQL 5.7 or higher
+- Composer
+- Node.js and NPM
+
+### Installation
+
+1. Clone the repository
+2. Install PHP dependencies: `composer install`
+3. Install Node.js dependencies: `npm install`
+4. Copy `.env.example` to `.env` and configure your database settings
+5. Generate application key: `php artisan key:generate`
+6. Run migrations: `php artisan migrate`
+7. Seed the database: `php artisan db:seed --class=AdminUserSeeder`
+8. Start the development server: `php artisan serve`
+
+## Login Credentials
+
+### Admin Access
+- **Email**: `admin@erp.com`
+- **Password**: `password123`
+- **Role**: System Administrator
+- **Access**: Full system access
+
+### HR Manager Access
+- **Email**: `hr@erp.com`
+- **Password**: `password123`
+- **Role**: HR Manager
+- **Access**: HR management, employee management, task assignment
+
+### Employee Access
+- **Email**: `employee@erp.com`
+- **Password**: `employee123`
+- **Role**: Regular Employee
+- **Access**: View assigned tasks, update task status
+
+## Database Setup
+
+The system uses MySQL database. Make sure to:
+
+1. Create a database named `erp` (or update the database name in `.env`)
+2. Configure your database credentials in the `.env` file
+3. Run migrations to create all necessary tables
+4. Run the seeder to create default users
 
 ## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This ERP system is built on Laravel, a web application framework with expressive, elegant syntax. Laravel provides:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [Simple, fast routing engine](https://laravel.com/docs/routing)
+- [Powerful dependency injection container](https://laravel.com/docs/container)
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent)
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations)
+- [Robust background job processing](https://laravel.com/docs/queues)
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting)
 
 ## Learning Laravel
 

@@ -12,8 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('passwords', function (Blueprint $table) {
-            $table->dropIndex(['user_id', 'dashboard_context']);
-            $table->dropColumn('dashboard_context');
+            // Check if the column exists before dropping it
+            if (Schema::hasColumn('passwords', 'dashboard_context')) {
+                // Check if the index exists before dropping it
+                if (Schema::hasIndex('passwords', 'passwords_user_id_dashboard_context_index')) {
+                    $table->dropIndex(['user_id', 'dashboard_context']);
+                }
+                $table->dropColumn('dashboard_context');
+            }
         });
     }
 
